@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maria Caroliny - Brazilian Lawyer, Civil and Consumer Law, and Master's Student in Business.">
+  <title>Maria Caroliny | Brazilian Lawyer & Business Graduate Student</title>
+
+  <style>
+    :root {
+      --navy: #0B1F33;
+      --dark-blue: #164E73;
+      --teal: #2D7FA3;
+      --gold: #C9A45C;
+      --off-white: #F7F5F0;
+      --white: #FFFFFF;
+      --charcoal: #263746;
+      --gray: #687786;
+      --light-gray: #E2E8EC;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 31, 51, 0.97);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s ease;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span { color: var(--gold); }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #E7EEF2;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(125deg, var(--navy), var(--dark-blue));
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -180px;
+      top: -140px;
+      border: 1px solid rgba(201, 164, 92, 0.25);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      right: 80px;
+      bottom: -220px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.05;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero h2 {
+      color: #D9E5EC;
+      font-size: clamp(21px, 3vw, 30px);
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #C5D4DD;
+      max-width: 720px;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .button-primary:hover {
+      background: #D8B975;
+      transform: translateY(-3px);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.45);
+    }
+
+    .button-outline:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    section { padding: 90px 8%; }
+
+    .section-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      color: var(--gray);
+      margin-bottom: 45px;
+    }
+
+    .about-section { background: var(--off-white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #4D5D69;
+      margin-bottom: 18px;
+    }
+
+    .profile-card {
+      background: var(--white);
+      padding: 35px;
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(11, 31, 51, 0.08);
+    }
+
+    .profile-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    .profile-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .profile-item:last-child { border-bottom: none; }
+
+    .profile-item strong {
+      display: block;
+      color: var(--dark-blue);
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .profile-item span { color: var(--gray); }
+
+    .education-section { background: var(--white); }
+
+    .education-card {
+      background: #FAFAFA;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .education-card .location {
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .education-card p { color: var(--gray); }
+
+    .background-section { background: var(--navy); }
+
+    .background-section .section-label { color: var(--gold); }
+    .background-section .section-title { color: var(--white); }
+    .background-section .section-intro { color: #C3D1D9; }
+
+    .background-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .background-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 30px;
+      border-radius: 9px;
+    }
+
+    .background-card h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .background-card p { color: #C4D0D8; }
+
+    .business-section { background: var(--white); }
+
+    .business-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .business-card {
+      padding: 35px;
+      background: var(--off-white);
+      border-radius: 10px;
+      border-top: 3px solid var(--dark-blue);
+    }
+
+    .business-card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .business-card p { color: var(--gray); }
+
+    .skills-section { background: var(--off-white); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill {
+      background: var(--white);
+      padding: 25px;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(11,31,51,0.08);
+    }
+
+    .skill-number {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .skill h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .skill p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .interests-section { background: var(--white); }
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .interest {
+      padding: 11px 19px;
+      border: 1px solid #CBD7DF;
+      border-radius: 30px;
+      color: var(--dark-blue);
+      background: #F8FAFB;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .interest:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .goals-section { background: var(--off-white); }
+
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .goal {
+      background: var(--white);
+      padding: 30px;
+      border-top: 3px solid var(--dark-blue);
+      border-radius: 9px;
+      box-shadow: 0 8px 25px rgba(11,31,51,0.05);
+    }
+
+    .goal h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .goal p { color: var(--gray); }
+
+    .opportunities-section { background: var(--white); }
+
+    .opportunity-box {
+      background: linear-gradient(135deg, var(--navy), var(--dark-blue));
+      padding: 45px;
+      border-radius: 12px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .opportunity-box::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      right: -80px;
+      top: -100px;
+      border: 1px solid rgba(201,164,92,0.2);
+      border-radius: 50%;
+    }
+
+    .opportunity-box h3 {
+      color: var(--gold);
+      font-size: 26px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .opportunity-box p {
+      color: #C8D5DD;
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 18px;
+    }
+
+    .opportunity-box strong { color: var(--white); }
+
+    .projects-section { background: var(--off-white); }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      padding: 35px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 12px 30px rgba(11,31,51,0.08);
+      transform: translateY(-3px);
+    }
+
+    .project-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--gray);
+      margin-bottom: 15px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #EDF4F7;
+      color: var(--dark-blue);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, var(--dark-blue), var(--navy));
+      text-align: center;
+    }
+
+    .contact-section .section-label { color: var(--gold); }
+    .contact-section .section-title { color: var(--white); }
+
+    .contact-section .section-intro {
+      color: #C6D3DB;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-email {
+      color: var(--white);
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #071521;
+      color: #8797A3;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    footer span { color: var(--gold); }
+
+    @media (max-width: 850px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 80vh;
+        padding: 70px 7%;
+      }
+
+      .about-grid,
+      .business-content,
+      .background-grid,
+      .goals-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      section { padding: 70px 7%; }
+    }
+
+    @media (max-width: 520px) {
+      .skills-grid { grid-template-columns: 1fr; }
+
+      .hero h1 { font-size: 45px; }
+      .hero h2 { font-size: 21px; }
+      .hero p { font-size: 16px; }
+
+      .section-title { font-size: 31px; }
+
+      .profile-card,
+      .opportunity-box,
+      .project-card {
+        padding: 25px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="logo">Maria <span>Caroliny</span></div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#background">Legal Background</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <div class="eyebrow">Law • Business • Technology</div>
+
+      <h1>Maria <span>Caroliny</span></h1>
+
+      <h2>
+        Brazilian Lawyer | Civil & Consumer Law | Master's Student in Business
+      </h2>
+
+      <p>
+        Brazilian lawyer with a professional background in Civil and Consumer
+        Law, currently pursuing a Master's degree in Business and developing
+        a growing interest in how technology and artificial intelligence can
+        be applied to business.
+      </p>
+
+      <div class="buttons">
+        <!-- Add your LinkedIn URL in the href below -->
+        <a
+          href="#"
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View LinkedIn
+        </a>
+
+        <a href="#about" class="button button-outline">
+          Explore My Profile
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="about" class="about-section">
+    <div class="section-container">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <div class="section-label">About Me</div>
+
+          <h2 class="section-title">
+            A legal background with a business perspective.
+          </h2>
+
+          <p>
+            I am a Brazilian lawyer with a Law degree and professional
+            experience in Brazil, with a primary background in Civil
+            and Consumer Law.
+          </p>
+
+          <p>
+            I completed my Law degree in December 2018 and developed
+            my professional background in the legal field in Brazil.
+          </p>
+
+          <p>
+            Currently, I am pursuing a Master's degree in Business at
+            Caroline University, expanding my knowledge beyond traditional
+            legal practice and developing a broader understanding of
+            business, management, and strategic decision-making.
+          </p>
+
+          <p>
+            Alongside my Business studies, I have a growing professional
+            interest in how technology and artificial intelligence can
+            be applied to business and organizations.
+          </p>
+
+        </div>
+
+        <div class="profile-card">
+
+          <h3>Professional Profile</h3>
+
+          <div class="profile-item">
+            <strong>Professional Background</strong>
+            <span>Brazilian Lawyer</span>
+          </div>
+
+          <div class="profile-item">
+            <strong>Legal Practice Areas</strong>
+            <span>Civil & Consumer Law</span>
+          </div>
+
+          <div class="profile-item">
+            <strong>Law Degree</strong>
+            <span>Completed December 2018</span>
+          </div>
+
+          <div class="profile-item">
+            <strong>Current Education</strong>
+            <span>Master's Degree in Business</span>
+          </div>
+
+          <div class="profile-item">
+            <strong>Current Academic Focus</strong>
+            <span>Business</span>
+          </div>
+
+          <div class="profile-item">
+            <strong>Professional Interests</strong>
+            <span>Business, Technology & AI Applications</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education-section">
+    <div class="section-container">
+
+      <div class="section-label">Education</div>
+
+      <h2 class="section-title">Academic Background</h2>
+
+      <p class="section-intro">
+        My academic background combines legal education with
+        graduate-level business studies.
+      </p>
+
+      <div class="education-card">
+
+        <h3>Law Degree</h3>
+
+        <div class="location">
+          Estácio de Sá — Vitória, Espírito Santo, Brazil
+        </div>
+
+        <p>
+          Completed in December 2018. Academic training in Law,
+          with a professional focus on Civil and Consumer Law.
+        </p>
+
+      </div>
+
+      <div class="education-card">
+
+        <h3>Master's Degree in Business</h3>
+
+        <div class="location">
+          Caroline University • Currently Pursuing
+        </div>
+
+        <p>
+          Graduate studies focused on business knowledge, management,
+          strategy, organizations, and professional development.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="background" class="background-section">
+    <div class="section-container">
+
+      <div class="section-label">Legal Background</div>
+
+      <h2 class="section-title">Civil & Consumer Law</h2>
+
+      <p class="section-intro">
+        My professional legal background in Brazil is primarily in
+        Civil and Consumer Law, developing skills that can also be
+        applied across different professional environments.
+      </p>
+
+      <div class="background-grid">
+
+        <div class="background-card">
+          <h3>Civil Law</h3>
+          <p>
+            Professional background in Civil Law, applying legal
+            reasoning and analysis to civil matters.
+          </p>
+        </div>
+
+        <div class="background-card">
+          <h3>Consumer Law</h3>
+          <p>
+            Professional background in Consumer Law and analysis
+            of issues involving consumer relationships and rights.
+          </p>
+        </div>
+
+        <div class="background-card">
+          <h3>Legal Research</h3>
+          <p>
+            Ability to research legal information, identify relevant
+            sources, and organize complex information.
+          </p>
+        </div>
+
+        <div class="background-card">
+          <h3>Legal Analysis</h3>
+          <p>
+            Ability to analyze legal issues through structured
+            reasoning and careful evaluation of information.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="business-section">
+    <div class="section-container">
+
+      <div class="section-label">Business & Technology</div>
+
+      <h2 class="section-title">Expanding Beyond Law</h2>
+
+      <p class="section-intro">
+        My current academic focus is Business, complemented by a growing
+        interest in how technology and artificial intelligence can be
+        applied to business, strategy, and organizational decision-making.
+      </p>
+
+      <div class="business-content">
+
+        <div class="business-card">
+          <h3>Law + Business</h3>
+          <p>
+            My legal background and Business studies allow me to develop
+            a broader perspective on organizations, decision-making,
+            strategy, and professional challenges.
+          </p>
+        </div>
+
+        <div class="business-card">
+          <h3>Technology + AI in Business</h3>
+          <p>
+            I am particularly interested in understanding how technology
+            and artificial intelligence can be applied to business,
+            organizations, and strategic decision-making.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="section-container">
+
+      <div class="section-label">Core Skills</div>
+
+      <h2 class="section-title">Professional Skills</h2>
+
+      <p class="section-intro">
+        Skills developed through legal education, professional experience,
+        graduate studies, and continuous learning.
+      </p>
+
+      <div class="skills-grid">
+
+        <div class="skill">
+          <div class="skill-number">01</div>
+          <h3>Legal Research</h3>
+          <p>Researching and organizing legal information and sources.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">02</div>
+          <h3>Legal Analysis</h3>
+          <p>Analyzing information through structured legal reasoning.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">03</div>
+          <h3>Critical Thinking</h3>
+          <p>Evaluating information and considering different perspectives.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">04</div>
+          <h3>Communication</h3>
+          <p>Organizing ideas and communicating information clearly.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">05</div>
+          <h3>Problem Solving</h3>
+          <p>Approaching challenges through structured analysis.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">06</div>
+          <h3>Business</h3>
+          <p>Developing knowledge in management, organizations, and business strategy.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">07</div>
+          <h3>Organization</h3>
+          <p>Managing information and approaching tasks in a structured way.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">08</div>
+          <h3>Technology in Business</h3>
+          <p>Exploring the role of technology in modern business environments.</p>
+        </div>
+
+        <div class="skill">
+          <div class="skill-number">09</div>
+          <h3>AI in Business</h3>
+          <p>Developing a professional interest in AI applications within business and organizations.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="interests-section">
+    <div class="section-container">
+
+      <div class="section-label">Professional Interests</div>
+
+      <h2 class="section-title">Areas That Interest Me</h2>
+
+      <p class="section-intro">
+        My interests reflect the intersection between my legal background,
+        current Business studies, and my curiosity about emerging technologies.
+      </p>
+
+      <div class="interest-list">
+
+        <div class="interest">Civil Law</div>
+        <div class="interest">Consumer Law</div>
+        <div class="interest">Business</div>
+        <div class="interest">Business Strategy</div>
+        <div class="interest">Technology in Business</div>
+        <div class="interest">Artificial Intelligence in Business</div>
+        <div class="interest">Entrepreneurship</div>
+        <div class="interest">Leadership</div>
+        <div class="interest">Innovation</div>
+        <div class="interest">Professional Development</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="goals" class="goals-section">
+    <div class="section-container">
+
+      <div class="section-label">Future Direction</div>
+
+      <h2 class="section-title">Professional Goals</h2>
+
+      <p class="section-intro">
+        My goal is to continue building a multidisciplinary professional
+        profile by combining my legal background with Business and an
+        interest in technology and artificial intelligence.
+      </p>
+
+      <div class="goals-grid">
+
+        <div class="goal">
+          <h3>Expand My Business Knowledge</h3>
+          <p>
+            Continue developing my understanding of management,
+            strategy, organizations, and business decision-making.
+          </p>
+        </div>
+
+        <div class="goal">
+          <h3>Connect Law & Business</h3>
+          <p>
+            Explore opportunities where my legal background and
+            Business education can complement each other.
+          </p>
+        </div>
+
+        <div class="goal">
+          <h3>Explore Technology & AI in Business</h3>
+          <p>
+            Develop a stronger understanding of how technology and
+            artificial intelligence can create value for businesses
+            and organizations.
+          </p>
+        </div>
+
+        <div class="goal">
+          <h3>Build a Global Perspective</h3>
+          <p>
+            Continue developing professionally in an international
+            environment and expand my knowledge across different fields.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="opportunities-section">
+    <div class="section-container">
+
+      <div class="section-label">Career Direction</div>
+
+      <h2 class="section-title">Open to Professional Opportunities</h2>
+
+      <div class="opportunity-box">
+
+        <h3>A Multidisciplinary Professional Profile</h3>
+
+        <p>
+          I am open to exploring professional opportunities where my
+          legal background, Business education, analytical skills,
+          and professional interests can contribute to an organization.
+        </p>
+
+        <p>
+          I am particularly interested in opportunities related to
+          <strong>
+            business, operations, compliance, legal and business support,
+            administration, strategy, and related professional fields.
+          </strong>
+        </p>
+
+        <p>
+          I am also interested in learning more about how technology
+          and artificial intelligence are being applied to business
+          and organizational environments.
+        </p>
+
+        <p>
+          My long-term goal is to continue developing a versatile
+          professional profile while creating value through analytical
+          thinking, communication, problem solving, and continuous learning.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <div class="section-container">
+
+      <div class="section-label">Projects</div>
+
+      <h2 class="section-title">
+        Academic & Professional Development
+      </h2>
+
+      <p class="section-intro">
+        This section can grow over time as I complete academic,
+        professional, business, and technology-related projects.
+      </p>
+
+      <div class="project-card">
+
+        <h3>Professional Portfolio Website</h3>
+
+        <p>
+          A personal portfolio developed to present my academic background,
+          legal experience, professional skills, interests, and career goals.
+          The project also provides practical experience with HTML, CSS,
+          and JavaScript.
+        </p>
+
+        <span class="project-tag">
+          HTML • CSS • JavaScript
+        </span>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+
+      <div class="section-label">Connect</div>
+
+      <h2 class="section-title">Let's Connect</h2>
+
+      <p class="section-intro">
+        I am interested in learning, developing new skills,
+        and connecting with professionals from different fields.
+      </p>
+
+      <div class="contact-buttons">
+
+        <!-- Replace # with your LinkedIn URL when ready -->
+        <a
+          href="#"
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:mariacaroliny.adv@gmail.com"
+          class="button button-outline"
+        >
+          Email Me
+        </a>
+
+      </div>
+
+      <div class="contact-email">
+        mariacaroliny.adv@gmail.com
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      © <span id="year"></span> Maria Caroliny.
+      Professional Portfolio.
+    </p>
+  </footer>
+
+  <script>
+    // Automatically updates the current year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Adds a subtle shadow to the navigation when scrolling
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+
+      if (window.scrollY > 40) {
+        navbar.style.boxShadow =
+          "0 5px 25px rgba(0, 0, 0, 0.20)";
+      } else {
+        navbar.style.boxShadow = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
